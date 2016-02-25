@@ -14,7 +14,7 @@ before_install:
 - env
 - locale
 - brew update
-- brew install carthage
+- brew upgrade carthage
 - carthage update --project-directory XCode --platform osx
 after_success:
 - swiftlint
