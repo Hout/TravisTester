@@ -6,13 +6,8 @@
 
 osx_image: xcode7.3
 language: objective-c
-#xcode_sdk: 
-#- macosx10.11
-#- phoneos9.3
-xcode_project: XCode/SwiftDate.xcodeproj
-xcode_scheme: 
-- SwiftDateTests-iOS 
-- SwiftDateTests-OSX
+xcode_sdk: macosx10.11
+xcode_scheme: SwiftDateTests-OSX
 before_install:
 - export LANG=en_US.UTF-8
 - env
@@ -21,7 +16,6 @@ before_install:
 - brew upgrade carthage 
 - brew install swiftlint
 - carthage update --project-directory XCode --platform osx,ios
-# script: "xctool $SCHEME test"
 after_success:
 - swiftlint --path Sources/SwiftDate
 - pod lib lint
