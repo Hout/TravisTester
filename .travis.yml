@@ -15,7 +15,7 @@ before_install:
 - brew update
 - brew upgrade carthage 
 - brew install swiftlint
-- carthage update --project-directory XCode --platform osx,ios
+- carthage update --project-directory XCode --platform osx
 after_success:
 - swiftlint --path Sources/SwiftDate
 - pod lib lint
