@@ -37,8 +37,8 @@ class NSTimeIntervalSpec: QuickSpec {
 
             context("toString") {
                 it("should return the proper string") {
-                    let rome = Region(TimeZoneName: EuropeRome)
-                    let date = NSDate(year: 2011, month: 10, day: 9, inRegion: rome)
+                    let rome = Region(timeZoneName: .EuropeRome)
+                    let date = NSDate(year: 2011, month: 10, day: 9, region: rome)
                     let interval = date.timeIntervalSinceReferenceDate
                     expect(interval.toString()) == "10y 9m 6d 22h"
                 }
